@@ -83,7 +83,7 @@ Account balance: 1000.0
 ```
 
 
-### Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/your-feature`)
@@ -93,10 +93,10 @@ Account balance: 1000.0
 
 
 
-### License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Contact
+## Contact
 
 - **Author**: Hossein Sadeghi
 - **Email**: sadeghi.ho@hotmail.com
