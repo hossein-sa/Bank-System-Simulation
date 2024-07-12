@@ -1,37 +1,50 @@
 # Bank System
 
-A simple bank system implemented in Python that allows users to open accounts, deposit and withdraw money, transfer funds, and check balances. This project includes an interactive menu for easy user interaction.
+A comprehensive bank system implemented in Python with MySQL database support. This system allows users to open accounts, manage transactions, and perform various banking operations through an interactive command-line interface.
 
 ## Features
 
-- Open an account
-- Show balance
+- Open a new account
+- Check account balance
 - Deposit money
 - Withdraw money
-- Transfer money
-- Show card number
+- Transfer money between accounts
+- View transaction history
+- Secure database storage of customer and account information
 
-## Getting Started
 
-### Prerequisites
+## Prerequisites
 
 - Python 3.x
+- MySQL Server
+- `mysql-connector-python` package
+
+
+### Database Setup
+
+1. Install MySQL Server if you haven't already.
+2. Create a new database named `bank`.
+3. Update the database connection details in `database_manager.py`:
+
+    ```python
+    host='localhost'
+    user='your_username'
+    password='your_password'
+    database='bank'
+    ```
 
 ### Installation
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_username/bank_system.git
-    cd bank_system
+    git clone https://github.com/hossein-sa/Bank-System-Simulation.git
+    cd Bank-System-Simulatio
     ```
-
-2. No additional libraries are required.
 
 ### Usage
 
-1. Run the `main.py` script:
-
+1. Run the main script to start the banking portal:
     ```bash
     python main.py
     ```
@@ -40,14 +53,6 @@ A simple bank system implemented in Python that allows users to open accounts, d
 
 ### Code Overview
 
-#### bank_system.py
-
-- **Branch**: Represents a bank branch with a code, city, and grade.
-- **CreditCard**: Represents a credit card with a card number and balance. Supports deposit and withdraw methods.
-- **Account**: Represents a bank account with an account number and an associated credit card.
-- **Customer**: Represents a customer with a name and an associated account.
-- **Bank**: Manages customers and accounts. Supports opening accounts, showing balances, transferring funds, depositing money, withdrawing money, and showing card numbers.
-
 #### main.py
 
 - Provides an interactive menu to interact with the `Bank` class.
@@ -55,41 +60,48 @@ A simple bank system implemented in Python that allows users to open accounts, d
 ### Example Interaction
 
 ```text
-Bank System Menu
-1. Open an account
-2. Show balance
+===== Banking Portal =====
+1. Open a new account
+2. Check balance
 3. Deposit money
 4. Withdraw money
 5. Transfer money
-6. Show card number
+6. View transaction history
 7. Exit
+==========================
 
-Enter your choice: 1
-Enter customer name: Alice
-Account opened. Account number: 1234567
+Enter your choice (1-7): 1
+Enter your name: Alice Johnson
+Enter your national code: 1234567890
+Enter your address: 123 Main St, Anytown, USA
+Enter your phone number: 555-1234
 
-Enter your choice: 2
-Enter account number: 1234567
-Account balance: 0.0
+Account opened successfully. Your account number is 9876543 and card number is 8844621087654321
 
-Enter your choice: 3
-Enter card number: 8844621001234567
-Enter amount to deposit: 1000
+Enter your choice (1-7): 3
+Enter your card number: 8844621087654321
+Enter the amount to deposit: $1000
+
 Deposit successful.
 
-Enter your choice: 2
-Enter account number: 1234567
-Account balance: 1000.0
+Enter your choice (1-7): 2
+Enter your account number: 9876543
+
+Your current balance is: $1000.00
+
+Enter your choice (1-7): 7
+
+Thank you for using our banking portal. Goodbye!
 ```
 
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Create a new Pull Request
+2. Create your feature branch (git checkout -b feature/AmazingFeature)
+3. Commit your changes (git commit -m 'Add some AmazingFeature')
+4. Push to the branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
 
 
 

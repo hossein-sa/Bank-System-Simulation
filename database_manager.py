@@ -37,7 +37,7 @@ class DatabaseManager:
         Closes the database connection and cursor.
     """
 
-    def __init__(self, host='localhost', user='root', password='toor', database='bank_db'):
+    def __init__(self, host='localhost', user='root', password='toor', database='bank'):
         try:
             self.conn = mysql.connector.connect(
                 host=host, user=user, password=password, database=database
